@@ -50,4 +50,8 @@ x.replace()
 if 'en' in x:  # наличие подстроки в строке
     print('yeeeeah')
 
+# срезы
+
+
+
 
