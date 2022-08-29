@@ -1,5 +1,6 @@
-for i in range(1, 10001):
-    for j in range(1, 10001):
+a1 = []
+for i in range(1, 1001):
+    for j in range(1, 1001):
         x = i
         y = j
         if y > x:
@@ -13,4 +14,5 @@ for i in range(1, 10001):
             a = b
             b = r
         if a == 7 and x == 42:
-            print(y)
+            a1.append(y)
+print(max(a1))
