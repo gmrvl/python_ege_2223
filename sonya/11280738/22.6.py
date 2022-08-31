@@ -1,0 +1,15 @@
+w=[]
+
+for i in range(1, 10001):
+    x = i
+    a = 0
+    b = 10
+    while x > 0:
+        c = x % 10
+        a += c
+        if c < b:
+            b = c
+        x //= 10
+    if a == 14 and b == 6:
+        w.append(i)
+print(min(w))
