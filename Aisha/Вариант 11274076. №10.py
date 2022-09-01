@@ -6,5 +6,10 @@ while '>1' in s or '>2' in s or '>3' in s:
         s = s.replace('>2', '2>', 1)
     if '>3' in s:
         s = s.replace('>3', '1>', 1)
-print(s)
+res = 0
+s = s[:-1]
+for i in s:
+    i = int(i)
+    res += i
+print(res)
 
