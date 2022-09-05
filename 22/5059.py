@@ -1,8 +1,8 @@
 a1 = []
 for i in range(1, 1001):
-    for j in range(1, 1001):
+    for w in range(1, 1001):
         x = i
-        y = j
+        y = w
         if y > x:
             z = x
             x = y
