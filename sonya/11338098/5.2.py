@@ -1,11 +1,10 @@
-
-for i in range(100,1000):
+for i in range(100, 1000):
     n = str(i)
-    a = n[:2] + n[0:2]
-    b = n[0:2] + n[2:]
+    a = int(n[0]) + int(n[1])
+    b = int(n[1]) + int(n[2])
     if a > b:
-        n = b + a
+        n = str(b) + str(a)
     else:
-        n = a + b
-    if n == 1216 :
-       print (i)
+        n = str(a) + str(b)
+    if n == '1216':
+        print(i)
