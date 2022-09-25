@@ -12,9 +12,7 @@ for a in range(1, 101):
                 print(a)
                 res = True
                 break
-        if res:
+        if res:  # if res == True:
             break
     if res:
         break
-
-
