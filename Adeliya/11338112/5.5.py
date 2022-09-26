@@ -5,7 +5,6 @@ for i in range(1000,10000):
     c=int(n[2])+int(n[3])
     n1 = str(a + b + c - max(a, b, c) - min(a, b, c))
     n2 = str(max(a, b, c))
-    s=n2+n1
+    s=n1+n2
     if s=='1517':
         print(i)
-        break

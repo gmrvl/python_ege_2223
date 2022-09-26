@@ -7,5 +7,5 @@ for i in range(1,1001):
         n += '00'
     r = int(n, 2)
     if r > 125:
-        print(r)
+        print(i)
         break
