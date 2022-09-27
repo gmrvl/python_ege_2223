@@ -19,4 +19,4 @@
 for i in range(1,1001):
     n = i
     while n>0:
-        t = 
+        pass
