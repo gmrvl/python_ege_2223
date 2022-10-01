@@ -7,4 +7,4 @@ for i in range(2,1000):
         n += '10'
     r = int(n,2)
     if r>97:
-        print(i)
+        print(r)

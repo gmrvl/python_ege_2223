@@ -8,6 +8,6 @@ for i in range(2,1000):
     else:
         n += '10'
     r = int(n,2)
-    if r>83:
-        print(i)
+    if r > 83:
+        print(r)
 
