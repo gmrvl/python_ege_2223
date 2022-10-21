@@ -7,27 +7,28 @@ last = ''
 
 for char in file:
     if char == 'L':
-        plast = 'L'
-        last = ''
-    elif char == 'D':
-        if plast == 'L':
-            last = 'D'
+        if last == 'R' or last == '':
+            count += 1
         else:
-            plast = ''
+            if count > maxcount:
+                maxcount = count
+            count = 1
+    elif char == 'D':
+        if last == 'L':
+            count += 1
+        else:
             if count > maxcount:
                 maxcount = count
             count = 0
     elif char == 'R':
         if plast == 'L' and last == 'D':
             count += 1
-            plast = ''
-            last = ''
         else:
-            plast = ''
-            last = ''
             if count > maxcount:
                 maxcount = count
             count = 0
+    plast = last
+    last = char
 if count > maxcount:
     maxcount = count
 print(maxcount)
