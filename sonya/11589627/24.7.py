@@ -9,7 +9,7 @@ for char in file:
         if с == 2:
             if count > maxcount:
                 maxcount = count
-            count = 0
+            count = 1
         else:
             count += 1
         с = 1
@@ -17,7 +17,7 @@ for char in file:
         if с == 1:
             if count > maxcount:
                 maxcount = count
-            count = 0
+            count = 1
         else:
             count += 1
         с = 2

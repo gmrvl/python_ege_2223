@@ -6,14 +6,17 @@ c = 0
 
 for char in file:
     if char == 'A' or char == 'C':
-        c = 1
+        if c == 2:
+            c = 1
+        else:
+            c = 0
     elif char == 'B':
         if c == 1:
             count += 1
         else:
             if count > maxcount:
                 maxcount = count
-            count = 0
+            count = 1
         c = 2
 if count > maxcount:
     maxcount = count
