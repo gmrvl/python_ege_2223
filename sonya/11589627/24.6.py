@@ -13,12 +13,14 @@ for char in file:
             c = 2
         elif c == 2:
             c = 3
+        else:
+            c = 0
         count += 1
     elif char == 'Y':
         if c == 3:
             if count > maxcount:
                 maxcount = count
-            count = 0
+            count = 3
         else:
             count += 1
         c = 4
