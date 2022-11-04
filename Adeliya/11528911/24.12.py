@@ -8,7 +8,7 @@ g=['A','O']
 str=str(file.readline)
 for i in range(0,len(str)):
     if (str[i] in s) and (str[i+1] in g):
-        count+=2
+        count+=1
     else:
         if count>maxcount:
             maxcount=count
