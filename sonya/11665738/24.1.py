@@ -1,21 +1,19 @@
-file = open('24.8.txt').read()
+file = open('24.1.txt').read()
 
 count = 0
 maxcount = 0
-c = 0
+с = 0
 
 for char in file:
     if char == 'A':
-        if c == 2:
+        if с == 2:
             if count > maxcount:
                 maxcount = count
+            с = 0
             count = 0
-            c = 0
         else:
             count += 1
-        c += 1
+        с += 1
     else:
         count += 1
-if count > maxcount:
-    maxcount = count
 print(maxcount)

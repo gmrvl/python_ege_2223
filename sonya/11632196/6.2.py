@@ -2,7 +2,7 @@ from turtle import*
 left(90)
 k = 30
 for i in range(4):
-    forward(4*k)
+    forward(7*k)
     right(90)
     forward(8*k)
     right(90)
