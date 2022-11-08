@@ -1,6 +1,6 @@
-file = open('24....txt').read()
+file = open('24.3.txt').read()
 
-groups = 0
+stringcount = 0
 string = ''
 
 for char in file:
@@ -9,10 +9,10 @@ for char in file:
     elif char == 'E' and len(string) > 0:
         string += char
         if len(string) >= 12:
-            groups += 1
+            stringcount += 1
         string = char
     elif char == 'F':
         string = ''
     elif len(string) > 0:
         string += char
-print(groups)
+print(stringcount)

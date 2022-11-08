@@ -1,4 +1,4 @@
-file = open('24.5.txt').read()
+file = open('24.13.txt').read()
 
 counts = [0]*26
 alth = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -13,4 +13,3 @@ for char in file:
         last = last[1:] + char
 maxx = counts.index(max(counts))
 print(alth[maxx])
-
