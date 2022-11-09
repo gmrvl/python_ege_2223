@@ -5,12 +5,12 @@ alth = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 last = ''
 
 for char in file:
-    if len(last) == 3:
-        if last[0] == last[2]:
-            counts[alth.find(char)] += 1
     if len(last) < 3:
         last += char
     else:
+        if last[1] == last[2]:
+            counts[alth.find(char)] += 1
         last = last[1:] + char
 maxx = counts.index(max(counts))
+print(counts)
 print(alth[maxx])
