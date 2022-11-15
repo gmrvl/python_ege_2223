@@ -1,7 +1,6 @@
-file=open('17.txt')
-count=0
-max_count=0
-count_90=0
-
+file = open('17.txt')
+count = 0
+last = ''
+plast = ''
 for i in file:
-    i=int(i)
+    i = int(i)
