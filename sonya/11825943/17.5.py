@@ -3,6 +3,8 @@ file = open('17.5.txt')
 last = -1
 counts = 0
 maxsumm = 0
+summ = 0
+
 s = 0
 i = 0
 for nb in file:
@@ -11,6 +13,7 @@ for nb in file:
         s += nb
         i += 1
 srarifm = s / i
+
 for n in file:
     n = int(n)
     if last > -1:
@@ -21,4 +24,6 @@ for n in file:
                 if summ > maxsumm:
                     maxsumm = summ
     last = n
+if summ > maxsumm:
+    maxsumm = summ
 print(counts, maxsumm)
