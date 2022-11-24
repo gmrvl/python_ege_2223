@@ -1,16 +1,17 @@
 file = open('17.txt')
 
-last = 0
+last = int(file.readline())
 maxsumm = 0
-k = 0
+count = 0
 
 for n in file:
-    summ = last + int(n)
-    if int(n) % 5 == 0 and summ % 7 == 0:
-        k += 1
+    n = int(n)
+    summ = last + n
+    if (n % 5 == 0 or last % 5 == 0) and summ % 7 == 0:
+        count += 1
         if maxsumm < summ:
             maxsumm = summ
-    last = int(n)
+    last = n
 if maxsumm < summ:
     maxsumm = summ
-print(k,maxsumm)
+print(count, maxsumm)
