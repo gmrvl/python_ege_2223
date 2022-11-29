@@ -22,7 +22,7 @@ for n in range(123456789, 223456790):
             if n % d == 0:
                 pardell.append(d)
                 pardell.append(n // d)
-            if lenpardell > 2:
+            if len(pardell) > 2:
                 break
             if len()
 
