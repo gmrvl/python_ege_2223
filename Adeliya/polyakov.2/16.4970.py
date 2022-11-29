@@ -15,4 +15,5 @@ k = 0
 for n in range(1, 100000000):
     if F(n) == 18:
         k += 1
+        print(n)
 print(k)

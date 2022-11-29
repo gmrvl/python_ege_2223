@@ -1,24 +1,18 @@
-def M(N):
-    k = 0
-    dell = 0
-    maxdell = 0
-    sqn = int(N ** 0.5)
-    for i in range(1, sqn + 1):
-        if N % i == 0:
-            k += 1
-            dell = N // i
-            if maxdell < dell:
-                maxdell = dell
-    if k < 2:
-        return 0
-    else:
-        return (N // maxdell) + (N // (N // maxdell))
-
 count = 0
-n = 11000000
+n = 11000001
 while count < 5:
-    number = n
-    if 0 < M(n) < 10000:
-        print(M(n), number)
+    dells = []
+    sqn = int(n ** 0.5)
+    for i in range(2, sqn + 1):
+        if n % i == 0:
+            dells.append(i)
+        if len(dells) >= 2:
+            break
+    if len(dells) < 2:
+        res = 0
+    else:
+        res = n // dells[0] + n // dells[1]
+    if 0 < res < 10000:
+        print(res, n)
         count += 1
     n += 1
