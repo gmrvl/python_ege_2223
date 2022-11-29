@@ -1,5 +1,5 @@
 count = 0
-i = 460000000
+i = 460000001
 while count < 5:
     dels = []
     for d in range(2, int(i ** 0.5) + 1):
@@ -9,8 +9,11 @@ while count < 5:
             else:
                 dels.append(d)
                 dels.append(i // d)
+        # if len(dels) > 10:
+        #     break
+
     if len(dels) >= 5:
         dels.sort()
         count += 1
-        print(i, dels[5])
+        print(dels[-5])
     i += 1
