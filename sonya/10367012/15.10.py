@@ -6,7 +6,7 @@ def Dell(n, m):
 
 
 def F(x, A):
-    return ((A < 50) and (not Dell(x, A)) <= (Dell(x, 10) <= (not Dell(x, 12))))
+    return (Dell(A, 40)) and (Dell(780, x)) <= ((not(Dell(A, x))) <= (not(Dell(180, x))))
 
 
 for A in range(1, 1000):
@@ -17,3 +17,4 @@ for A in range(1, 1000):
             break
     if OK:
         print(A)
+        break
