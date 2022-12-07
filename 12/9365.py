@@ -1,4 +1,4 @@
-s = '8' * 68
+s = '8'*68
 
 while '222' in s or '888' in s:
     if '222' in s:
