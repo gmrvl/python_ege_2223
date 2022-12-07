@@ -14,6 +14,8 @@ for nb in file:
         i += 1
 srarifm = s / i
 
+
+file = open('17.5.txt')
 for n in file:
     n = int(n)
     if last > -1:

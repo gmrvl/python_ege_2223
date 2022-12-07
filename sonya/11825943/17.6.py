@@ -11,6 +11,8 @@ for i in file:
         if i > maxtri:
             maxtri = i
 
+file = open('17.6.txt')
+
 for n in file:
     n = int(n)
     if (((last % 10 == 3) or (last % 10 == -3)) and ((n % 10 != 3) or (n % 10 != -3))) or (((n % 10 == 3) or (n % 10 == -3)) and ((last % 10 != 3) or (last % 10 != -3))):
