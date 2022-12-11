@@ -2,7 +2,7 @@ file= open('17.3.txt')
 count=0
 summ=0
 maxsumm=0
-last=0
+last=int(file.readline())
 for i in file:
     i=int(i)
     if (last*i)%15==0:
