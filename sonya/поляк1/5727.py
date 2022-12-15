@@ -1,5 +1,5 @@
 for n in range(1000):
-    s = '3'*n + '2'*n + '1'*n
+    s = '123'*n
     while '21' in s or '31' in s or '32' in s:
         if '21' in s:
             s = s.replace('21', '12', 1)
