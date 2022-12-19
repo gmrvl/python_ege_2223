@@ -1,5 +1,6 @@
-for n in range(1000):
-    s = '3'*n + '2'*n + '1'*n
+for n in range(3, 1000, 3):
+    c = n // 3
+    s = '3'*c + '2'*c + '1'*c
     while '21' in s or '31' in s or '32' in s:
         if '21' in s:
             s = s.replace('21', '12', 1)
@@ -10,3 +11,4 @@ for n in range(1000):
     if len(s) >= 50:
         if s[49] == '2':
             print(n)
+            break
