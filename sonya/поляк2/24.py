@@ -2,32 +2,56 @@ file = open('24-230.txt').read()
 
 
 chislo = ''
+c = 0
+chisla = []
 
 for char in file:
-    if chislo == '':
-        if char == 'Z':
-            chislo += char
-    if chislo[0] == 'Z' and len(chislo) == 1:
-        if char == '8':
-            chislo += '8'
-    if chislo[0] == 'Z' and chislo[1] == '8' and len(chislo) == 2:
-        if char == '0' or char == '1' or char == '2' or char == '3' or char == '4' or char == '5' or char == '6' or char == '7' or char == '8' or char == '9':
-            chislo += char
-    if chislo[0] == 'Z' and chislo[1] == '8' and len(chislo) == 3:
-        if char == '0' or char == '1' or char == '2' or char == '3' or char == '4' or char == '5' or char == '6' or char == '7' or char == '8' or char == '9':
-            chislo += char
-    if chislo[0] == 'Z' and chislo[1] == '8' and len(chislo) == 4:
-        if char == '0' or char == '1' or char == '2' or char == '3' or char == '4' or char == '5' or char == '6' or char == '7' or char == '8' or char == '9':
-            chislo += char
-    if chislo[0] == 'Z' and chislo[1] == '8' and len(chislo) == 5 :
-        if char == '5':
-            chislo += char
-    if chislo[0] == 'Z' and chislo[1] == '8' and len(chislo) == 6 and chislo[6] == '5' :
-        if char == '4':
-            chislo += char
-    if chislo[0] == 'Z' and chislo[1] == '8' and len(chislo) == 7 and chislo[6] == '5' and chislo[7] == '4':
-        if char == '0' or char == '1' or char == '2' or char == '3' or char == '4' or char == '5' or char == '6' or char == '7' or char == '8' or char == '9':
-            chislo += char
-    if chislo[0] == 'Z' and chislo[1] == '8' and len(chislo) == 7 and chislo[6] == '5' and chislo[7] == '4':
-        if char == '0' or char == '1' or char == '2' or char == '3' or char == '4' or char == '5' or char == '6' or char == '7' or char == '8' or char == '9':
-            chislo += char
+    if c == 0 and char == 'Z':
+        chislo += char
+        c = 1
+    if c == 1 and char == '8':
+        chislo += char
+        c = 2
+    if c == 2 and (char == '0' or char == '1' or char == '3' or char == '3' or char == '4' or char == '5'or char == '6' or char == '7' or char == '8' or char == '9'):
+        chislo += char
+        c = 3
+    if c == 3 and (char == '0' or char == '1' or char == '3' or char == '3' or char == '4' or char == '5'or char == '6' or char == '7' or char == '8' or char == '9'):
+        chislo += char
+        c = 4
+    if c == 4 and (char == '0' or char == '1' or char == '3' or char == '3' or char == '4' or char == '5'or char == '6' or char == '7' or char == '8' or char == '9'):
+        chislo += char
+        c = 5
+    if c == 5 and char == '5':
+        chislo += char
+        c = 6
+    if c == 6 and char == '4':
+        chislo += char
+        c = 7
+    if c == 7 and (char == '0' or char == '1' or char == '3' or char == '3' or char == '4' or char == '5'or char == '6' or char == '7' or char == '8' or char == '9'):
+        chislo += char
+        c = 8
+    if c == 8 and (char == '0' or char == '1' or char == '3' or char == '3' or char == '4' or char == '5'or char == '6' or char == '7' or char == '8' or char == '9'):
+        chislo += char
+        c = 9
+    if c == 9 and (char == '0' or char == '1' or char == '3' or char == '3' or char == '4' or char == '5'or char == '6' or char == '7' or char == '8' or char == '9'):
+        chislo += char
+        c = 10
+    if c == 10 and char == '2':
+        chislo += char
+        c = 11
+    if c == 11 and char == '2':
+        chislo += char
+        c = 12
+    if c == 12 and char == 'Z':
+        chislo += char
+        chislo = chislo[1:]
+        chislo = chislo[:-1]
+        chislo = int(chislo)
+        chisla.append(chislo)
+        chislo = ''
+        c = 0
+    else:
+        c = 0
+        chislo = ''
+print(max(chisla))
+
