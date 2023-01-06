@@ -1,0 +1,1 @@
+file = open('17.3.txt')
