@@ -20,5 +20,12 @@ for i in range(1000, 10000):
             r = n.replace('2', '3', 1)
         if s == '6':
             r = n.replace('6', '3', 1)
+    if s == '9':
+        r = int(n)
+        while r > 0:
+            r8 = str(r % 8) + r8
+            r //= 8
+        if r8[-1] == '4':
+            count += 1
 print(count)
 
