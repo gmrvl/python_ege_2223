@@ -1,18 +1,12 @@
 file = open('17.txt')
 
-counts = 0
+strings = [int(i) for i in file]
+count = 0
 maxsumm = 0
-summ = 0
-last = -1
-for n in file:
-    n = int(n)
-    if last > -1:
-        summ = last + n
-        if summ % 2 == 0 or n % 19 ==0 or last % 19 == 0:
-            counts += 1
-            if maxsumm < summ:
-                maxsumm = summ
-    last = n
-if maxsumm < summ:
-    maxsumm = summ
-print(counts,maxsumm)
+
+for x in range(0,len(strings) - 1):
+    for y in range(x + 1, len(strings)):
+        if (strings[x] - strings[y]) % 2 == 0 and (strings[x] % 19 == 0 or strings[y] % 19 == 0):
+            count += 1
+            maxsumm = max(maxsumm, strings[x] + strings[y])
+print(count,maxsumm)

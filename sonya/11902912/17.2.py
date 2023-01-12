@@ -24,7 +24,7 @@ plast = -1
 for number in file:
     number = int(number)
     if plast > - 1:
-        if (plast % 5 == 0 and number < srarfm) or (plast % 5 != 0 and plast < srarfm):
+        if (plast % 5 == 0 and number < srarfm ) or ( plast < srarfm and number % 5 == 0):
             count += 1
             summ = number + plast
             if summ > maxsumm:
