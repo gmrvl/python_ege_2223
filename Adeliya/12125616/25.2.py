@@ -1,10 +1,8 @@
 for i in range(312614, 312652):
     sq = i ** 0.5
-    if sq != int(sq):
-        continue
     sq = int(sq)
-    a = [sq]
-    for dell in range(2, sq):
+    a = []
+    for dell in range(1, sq + 1):
         if i % dell == 0:
             dell2 = i // dell
             a.append(dell)
@@ -12,4 +10,5 @@ for i in range(312614, 312652):
             if len(a) > 6:
                 break
     if len(a) == 6:
-        print(i, max(a))
+        a = sorted(a)
+        print(a)
