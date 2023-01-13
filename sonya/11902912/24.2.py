@@ -11,7 +11,8 @@ for char in file:
     if len(last) == 3:
         if last[0] == last[2]:
             count[alth.find(last[1])] += 1
-        last = last[2:] + char
+        last = last[1:] + char
+print(count)
 maxx = count.index(max(count))
 print(alth[maxx])
 

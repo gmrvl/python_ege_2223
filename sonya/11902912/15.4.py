@@ -4,8 +4,9 @@ def ДЕЛ(n, m):
     else:
         return False
 
+
 def F(x, A):
-    return ДЕЛ(x, A) <= (not(ДЕЛ(x, 21)) + ДЕЛ(x, 35))
+    return ДЕЛ(x, A) <= ((not(ДЕЛ(x, 21))) + ДЕЛ(x, 35))
 
 
 for A in range(1, 100):
@@ -16,3 +17,4 @@ for A in range(1, 100):
             break
     if ok:
         print(A)
+        
