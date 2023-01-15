@@ -1,12 +1,10 @@
 file=open('17.3.txt')
-count=0
-
-summ=0
-maxsumm=0
-for i in file:
-    i=int(i)
-    if last%9==0 or i%9==0:
-
-if summ > maxsumm:
-    maxsumm=summ
-print(count,maxsumm)
+count = 0
+maxx= 0
+arr = [int(i) for i in file]
+for i in range(len(arr) - 1):
+    for j in range(i + 1, len(arr)):
+        if (arr[i] + arr[j]) % 9 == 0:
+            count += 1
+            maxx = max(maxx, arr[i] + arr[j])
+print(count, maxx)
