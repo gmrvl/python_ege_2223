@@ -16,13 +16,13 @@ print(maxtri)
 
 file = open('17 (2).txt')
 
-last = 0
+last = int(file.readline())
 count = 0
 maxsumm = 0
 
 for n in file:
-    n = int(n)
-    if ((n % 10 == 3 or n % 10 == -3) and (last % 10 != 3 and last % 10 != -3)) or ((last % 10 == 3 or last % 10 == -3) and (n % 10 != 3 and n % 10 != -3)):
+    n = abs(int(n))
+    if ((n % 10 == 3) and (last % 10 != 3)) or ((last % 10 == 3) and (n % 10 != 3)):
         if (n ** 2 + last ** 2) >= maxtri ** 2:
             count += 1
             maxsumm = max(maxsumm, n ** 2 + last ** 2)

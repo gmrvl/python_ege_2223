@@ -12,7 +12,7 @@ for x in file:
     if x % 14 == 0:
         max0 = max(max0, x)
 
-file = open('27-A_2.txt')
+file = open('27-B_2.txt')
 n = file.readline()
 
 for xx in file:
@@ -20,7 +20,7 @@ for xx in file:
     if xx != max0:
         maxX = max(xx, maxX)
 
-file = open('27-A_2.txt')
+file = open('27-B_2.txt')
 n = file.readline()
 
 for i in file:
