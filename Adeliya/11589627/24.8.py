@@ -1,8 +1,20 @@
 file=open('24.8.txt').read()
 
-count=0
-countA = 0 # количество букв А которые уже есть в строке.
-maxcount=0
-
+count = 0
+maxcount = 0
+c = 0
 for i in file:
-    if i=='A':
+    if i == 'A':
+        if c == 2:
+            if count > maxcount:
+                maxcount = count
+            count = 0
+            c = 0
+        else:
+            count += 1
+            c += 1
+    else:
+        count += 1
+if count > maxcount:
+    maxcount = count
+print(maxcount)
