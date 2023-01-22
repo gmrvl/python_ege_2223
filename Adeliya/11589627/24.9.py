@@ -1,17 +1,18 @@
-file = open('24.9.txt').read() # переписать то что есть в 11 задачку
+file=open('24.9.txt').read()
 
-count = 0  # количество символов в цепочке
-string = ''
+string=''
+maxstring=0
 for i in file:
-    if i == 'F':
-        string = ''
-    # если встретилась е - надо начать ИЛИ закончить цепочку
+    if i=='A':
+        string=''
     else:
-        string += i
-        # if string.count('E') >= 3:
-            count += 1
-            # if count > maxcount:
-            #     maxcount = count
-if count > maxcount:
-    maxcount = count
-print(maxcount)
+        string+=i
+        if string.count('E') >= 3 and len(string) > maxstring:
+            maxstring=len(string)
+if string.count('E') >= 3 and len(string) > maxstring:
+    maxstring=len(string)
+print(maxstring)
+
+
+
+

@@ -1,4 +1,4 @@
-file=open('24.8.txt').read()
+file=open('24.txt').read()
 
 count = 0
 maxcount = 0
