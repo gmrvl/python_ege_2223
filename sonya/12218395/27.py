@@ -31,6 +31,6 @@ for i in file:
         max7 = max(max7, i)
 
 
-print(max(max0*maxX, max7 * max2))
+print(max(max0 * max(maxX, max7, max2), max7 * max2))
 
 
