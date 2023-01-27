@@ -1,37 +1,38 @@
-#комбинаций BAC и СAB
+# комбинаций BAC и СAB
 file = open('24-224.txt').read()
 count = 0
 maxcount = 0
-c = 0
-b = 0
+c = 0  # bac
+b = 0  # cab
+last = ''
 
 for char in file:
-    if char == 'B' and c == 0:
+    if char == 'B':
+        if last == 'CA' or '':
+            count += 1
+            last = ''
+        else:
+            if maxcount < count:
+                maxcount = count
+            count = 1
+            last = 'B'
+
+    elif char == 'C':
+        if last == 'BA' or '':
+            count += 1
+            last = ''
+        else:
+            if maxcount < count:
+                maxcount = count
+            count = 1
+            last = 'C'
+
+    elif char == 'A' and (last == 'C' or last == 'B'):
         count += 1
-        c = 1
-        b = 0
-    if char == 'B' and b == 2:
-        count += 1
-        c = 0
-        b = 0
-    if char == 'C' and c == 2:
-        count += 1
-        c = 0
-        b = 0
-    if char == 'C' and b == 0:
-        count += 1
-        c = 0
-        b = 1
-    if char == 'A' and c == 1:
-        count += 1
-        c = 2
-        b = 0
-    if char == 'A' and b == 1:
-        count += 1
-        c = 0
-        b = 2
+        last += 'A'
     else:
         maxcount = max(maxcount, count)
         count = 0
-        c = 0
+        last = ''
+    print(last)
 print(maxcount)

@@ -1,9 +1,8 @@
-file = open('28130_A.txt')
+file = open('28130_B.txt')
 n = file.readline()
 
-ost_m_50 = [0]*51
-ost_b_50 = [0]*80
-
+ost_m_50 = [0] * 51
+ost_b_50 = [0] * 80
 
 for string in file:
     string = int(string)
@@ -17,11 +16,12 @@ count = 0
 for ost in range(1, 51):
     count += ost_m_50[ost] * ost_b_50[80 - ost]
 
-for osti in range(1, 80):
-    count += ost_m_50[0] * ost_b_50[80 - osti]
-    count += ost_b_50[0] * ost_b_50[80 - osti]
+# for ost in range(1, 80):
+# count += ost_m_50[0] * ost_b_50[80 - ost]
+count += ost_b_50[0] * (ost_b_50[0] - 1) // 2
+count += ost_b_50[40] * (ost_b_50[40] - 1) // 2
 
 for ostii in range(1, 40):
-    count += ost_b_50[ostii]*ost_b_50[80 - ostii]
+    count += ost_b_50[ostii] * ost_b_50[80 - ostii]
 
 print(count)

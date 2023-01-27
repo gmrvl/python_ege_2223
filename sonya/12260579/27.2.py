@@ -1,16 +1,14 @@
-file = open('inf_26_04_21_27a.txt')
+file = open('inf_26_04_21_27b.txt')
 n = file.readline()
-
 
 summbolsh = 0
 summmensh = 0
-min1 = 100000 #оба нечетн
-min2 = 100000 # наим неченое наиб четное
-min3 = 100000 # наим четное наиб нечетное
-
+min1 = 100000  # оба нечетн
+min2 = 100000  # наим неченое наиб четное
+min3 = 100000  # наим четное наиб нечетное
 
 for i in file:
-    a, b = i.split('  ')
+    a, b = i.split()
     a, b = int(a), int(b)
     if a % 2 != 0:
         summbolsh += max(a, b)
@@ -29,4 +27,3 @@ elif summmensh % 2 != 0 and summbolsh % 2 == 0:
     print(summbolsh + summmensh - min1)
 elif summmensh % 2 == 0 and summbolsh % 2 == 0:
     print(summbolsh + summmensh - min3)
-
