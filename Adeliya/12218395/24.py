@@ -1,20 +1,20 @@
-file=open('24.txt').read()
+file = open('24.txt').read()
 
-count = 0
+last = ''
 maxcount = 0
 c = 0
 for i in file:
     if i == 'A':
-        if c == 2:
-            if count > maxcount:
-                maxcount = count
-            count = 0
-            c = 0
+        if c == 1:
+            if len(last) > maxcount:
+                maxcount = len(last)
+            last = last[last.find('A')+1:] + 'A'
+            # print(last)
         else:
-            count += 1
+            last += i
             c += 1
     else:
-        count += 1
-if count > maxcount:
-    maxcount = count
+        last += i
+if len(last) > maxcount:
+    maxcount = len(last)
 print(maxcount)
