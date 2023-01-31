@@ -9,5 +9,5 @@ for i in z:
         for ch in CH:
             s = '123' + str(i) + str(n) + str(ch) + '56'
             s = int(s)
-    if s % 206 == 0:
-        print(s, s // 206)
+            if s % 206 == 0:
+                print(s, s // 206)
