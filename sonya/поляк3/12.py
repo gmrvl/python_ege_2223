@@ -6,5 +6,6 @@ for n in range(1, 100):
         else:
             if '1' in s:
                 s = s.replace('1', '0', 1)
-    if len(s) == 3:
+    if 100 <= len(s) <= 999:
         print(n, s)
+        break

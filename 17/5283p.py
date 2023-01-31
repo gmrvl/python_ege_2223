@@ -4,7 +4,7 @@ for i in file:
     i = int(i)
     if (i % 43 == 0) and (i < M):
         M = i
-print(M)
+
 m0 = M % 10
 
 file = open('5283p.txt')
@@ -16,9 +16,13 @@ maxx = last
 
 for i in file:
     i = int(i)
-    if ((i + last) % M == 0) or ((i % 10) == m0) or ((last % 10) == m0):
+    if (i + last) % M == 0:
         count += 1
         maxx = max(maxx, i, last)
+    elif (i % 10 == m0) or (last % 10 == m0):
+        count += 1
+        maxx = max(maxx, i, last)
+    last = i
 print(count, maxx)
 
 # for i in range(0, len(a) - 1):
@@ -26,4 +30,3 @@ print(count, maxx)
 #         if ((a[i] + a[j]) % M == 0) or ((a[i] % 10 == m0) or (a[j] % 10 == m0)):
 #             count += 1
 #             maxx = max(maxx, a[i], a[j])
-
