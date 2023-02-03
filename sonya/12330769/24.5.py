@@ -3,39 +3,26 @@ file = open('24.5.txt').read()
 
 count = 0
 maxcount = 0
-last = ''
+last = '000'
 
 for char in file:
+    if char == 'A':
+        if last == 'ABC' or last == 'ABB' or last == 'ACC' or last == 'ACB':
+            count += 1
+        else:
+            maxcount = max(maxcount, count)
+            count = 1
     if char == 'B':
-        if last == 'CA':
+        if last == 'BAC' or last == 'CAB' or last == 'CCA' or last == 'BCA':
             count += 1
-            last = ''
-        elif last == '':
-            count += 1
-            last = 'B'
         else:
-            if maxcount < count:
-                maxcount = count
+            maxcount = max(maxcount, count)
             count = 1
-            last = 'B'
-    elif char == 'C':
-        if last == 'BA':
+    if char == 'C':
+        if last == 'CBA' or last == 'BAC' or last == 'CAB' or last == 'BBA':
             count += 1
-            last = ''
-        elif last == '':
-            count += 1
-            last = 'C'
         else:
-            if maxcount < count:
-                maxcount = count
+            maxcount = max(maxcount, count)
             count = 1
-            last = 'C'
-    elif char == 'A' and (last == 'C' or last == 'B'):
-        count += 1
-        last += 'A'
-    else:
-        maxcount = max(maxcount, count)
-        count = 0
-        last = ''
-maxcount = max(maxcount, count)
+    last = last[1:] + char
 print(maxcount)

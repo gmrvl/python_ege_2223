@@ -21,14 +21,24 @@ print(srarifm)
 file = open('17-340.txt')
 
 count = 0
-maxcount = 0
-last = ''
+maxsumm = 0
+last = int(file.readline())
 
 for n in file:
     n = int(n)
-    n8 = ''
-    while n > 0:
-        n8 += (n % 8)
-        n //= 8
+    n8 = oct(n)
+    last8 = oct(last)
+    m = list(n8)
+    minn = min(m)
+    maxx = max(m)
+    l = list(last8)
+    minl = min(l)
+    maxl = max(l)
+    if n8.find(maxx) > n8.find(minn) and last8.find(maxl) > last8.find(minl) and (last + n) < srarifm:
+        count += 1
+        maxsumm = max(maxsumm, last + n)
+    last = n
+print(count,maxsumm)
+
 
 

@@ -29,12 +29,13 @@ for char in file:
                 maxcount = count
             count = 1
             last = 'C'
-    elif char == 'A' and (last == 'C' or last == 'B'):
-        count += 1
-        last += 'A'
-    else:
-        maxcount = max(maxcount, count)
-        count = 0
-        last = ''
+    elif char == 'A':
+        if last == 'C' or last == 'B':
+            count += 1
+            last += 'A'
+        else:
+            maxcount = max(maxcount, count)
+            count = 0
+            last = ''
 maxcount = max(maxcount, count)
 print(maxcount)

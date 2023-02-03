@@ -9,7 +9,7 @@ last = '000'
 
 for i in file:
     if i == 'B':
-        if last[1:3] == 'CA' or last == 'BAC' or last == 'CAB':
+        if last[1:] == 'CA' or last == 'BAC' or last == 'CAB':
             count += 1
             l += i
         else:
