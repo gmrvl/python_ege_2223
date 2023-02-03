@@ -23,7 +23,8 @@ for i in range(n):
     s0 += abs(a[i][0] - a[0][0])*a[i][1]
 
 for i in range(1, n):
-    s0 = s0 + (a[i][0] - a[i-1][0])*do[i-1] - (a[i][0] - a[i-1][0])*(do[-1] - do[i-1])
+    rast = (a[i][0] - a[i-1][0])
+    s0 = s0 + rast*do[i-1] - rast*(do[-1] - do[i-1])
     minn = min(minn, s0)
 print(minn)
 
