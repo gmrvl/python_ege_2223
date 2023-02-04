@@ -13,7 +13,6 @@ for string in file:
     if string % 22 == 0:
         s += 1
         i += string
-    last = string
 
 srarifm = i // s
 print(srarifm)
@@ -21,24 +20,23 @@ print(srarifm)
 file = open('17-340.txt')
 
 count = 0
-maxsumm = 0
+maxcount = 0
 last = int(file.readline())
 
 for n in file:
     n = int(n)
-    n8 = oct(n)
-    last8 = oct(last)
+    n8 = oct(n)[2:]
+    last8 = oct(last)[2:]
     m = list(n8)
-    minn = min(m)
-    maxx = max(m)
+    minm = min(m)
+    maxm = max(m)
     l = list(last8)
-    minl = min(l)
     maxl = max(l)
-    if n8.find(maxx) > n8.find(minn) and last8.find(maxl) > last8.find(minl) and (last + n) < srarifm:
+    minl = min(l)
+    if n8.find(maxm) < n8.find(minm) and last8.find(maxl) < last8.find(minl) and (last + n) < srarifm:
         count += 1
-        maxsumm = max(maxsumm, last + n)
+        maxcount = max(maxcount, last + n)
     last = n
-print(count,maxsumm)
-
+print(count, maxcount)
 
 
