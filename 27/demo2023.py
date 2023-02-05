@@ -20,7 +20,7 @@ for i in range(1, n):
 s0 = 0
 
 for i in range(n):
-    s0 += abs(a[i][0] - a[0][0])*a[i][1]
+    s0 += abs(a[i][0] - a[0][0]) * a[i][1]
 
 for i in range(1, n):
     rast = (a[i][0] - a[i-1][0])
