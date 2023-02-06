@@ -27,3 +27,5 @@ for i in range(1, n):
     zatrat = zatrat + rast*do[i-1] - rast*(do[-1] - do[i-1])
     minn = min(minn,zatrat)
 print(minn)
+
+
