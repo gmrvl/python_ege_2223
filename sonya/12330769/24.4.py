@@ -7,6 +7,9 @@ s = 0
 
 for char in file:
     if char == 'C' or char == 'D' or char == 'F':
+        if s == 1:
+            maxcount = max(maxcount, count)
+            count = 0
         s = 1
     elif char == 'A' or char == 'O':
         if s == 1:

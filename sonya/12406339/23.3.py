@@ -4,4 +4,4 @@ def f(x,y):
     if x > y:
         return 0
     return f(x+1, y) + f(x + 2, y) + f(x + 4, y)
-print(f(1,8) + f(8,15))
+print(f(1,8) * f(8,15))
