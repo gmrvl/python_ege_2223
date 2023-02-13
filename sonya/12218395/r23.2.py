@@ -1,8 +1,10 @@
-def f(x,y):
+def f(x,y,flag):
     if x > y:
         return 0
     if x == y:
         return 1
+    elif flag:
+        return f(x + 1,y, True) + f(x + 2,y, True) + f(x * 2, y, False)
     else:
-        return f(x + 1,y) + f(x + 2,y) + f(x * 2, y)
-print(f(1,4)*f(4,9))
+        return f(x + 1,y, True) + f(x + 2,y, True)
+print(f(1,9,True))
