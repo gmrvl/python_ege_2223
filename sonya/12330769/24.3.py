@@ -12,6 +12,9 @@ for char in file:
         maxcount = max(maxcount, count)
         count = 1
         c = 1
+    elif char == 'L':
+        count = 1
+        c = 1
     elif char == 'D' and c == 1:
         count += 1
         c = 2
@@ -22,4 +25,5 @@ for char in file:
         maxcount = max(maxcount, count)
         count = 0
         c = 0
+
 print(maxcount)
