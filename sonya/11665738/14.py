@@ -1,7 +1,6 @@
-s = '8x834'
-y = '44x27'
+for x in range(0,10):
+    s = int('8' + str(x) + '834',16)
+    y = int('44' + str(x) + '27', 16)
+    if (s+y) % 23 == 0:
+        print((s+y)//23)
 
-a = [0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F]
-for i in a:
-    t = i
-    s = s.replace('x', i)

@@ -14,10 +14,9 @@ for char in file:
     elif char == 'A' or char == 'O':
         if s == 1:
             count += 1
-            s = 0
         else:
             maxcount = max(maxcount, count)
             count = 0
-            s = 0
+        s = 0
 maxcount = max(maxcount, count)
 print(maxcount)
