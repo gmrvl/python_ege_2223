@@ -1,7 +1,7 @@
 n = 460000000 + 1
 count = 0
 while count < 5:
-    sqn = int(n * 0.5)
+    sqn = int(n ** 0.5)
     dells = []
     for dell in range(2, sqn + 1):
         if n % dell == 0:

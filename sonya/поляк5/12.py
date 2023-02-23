@@ -1,5 +1,5 @@
 for n in range(40, 100):
-    s = '>' + n*'21'
+    s = '>' + n*'210'
     while '>1' in s or '>2' in s or '>0' in s:
         if '>1' in s:
             s = s.replace('>1','22>',1)
