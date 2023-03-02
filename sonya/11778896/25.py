@@ -2,13 +2,15 @@ count = 0
 i = 460000001
 while count < 5:
     dels = []
-    for d in range(2, int(i ** 0.5) + 1):
+    sqn = int(i ** 0.5)
+    for d in range(2, sqn + 1):
         if i % d == 0:
-            if d == (i // d):
+            d2 = i // d
+            if d == d2:
                 dels.append(d)
             else:
                 dels.append(d)
-                dels.append(i // d)
+                dels.append(d2)
         # if len(dels) > 10:
         #     break
 
