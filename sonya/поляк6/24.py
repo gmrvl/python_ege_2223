@@ -12,5 +12,5 @@ for char in file:
         else:
             maxcount = max(maxcount, count)
             count = 0
-            last = last[1:] + char
+            last = last[1:]
 print(maxcount)
