@@ -2,6 +2,7 @@ file = open('26.5.txt')
 n = int(file.readline())
 maxs = []
 a = [10001 * [0] for j in range(10001)]
+print(a)
 for i in file:
     x, y = map(int, i.split(' '))
     a[x][y] = 1

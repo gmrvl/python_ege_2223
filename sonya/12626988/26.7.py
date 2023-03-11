@@ -1,4 +1,4 @@
-file = open('26.7.txt')
+file = open('26.txt')
 n = int(file.readline())
 numbers = [int(i) for i in file]
 chnumbers = []

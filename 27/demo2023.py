@@ -1,9 +1,6 @@
 file = open('47231.txt')
-
 n = int(file.readline())
-
 a = []
-
 for i in file:
     point, prob = map(int, i.split())
     if prob % 36 == 0:

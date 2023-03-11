@@ -11,7 +11,7 @@ for i in files:
     else:
         break
 maxx = 0
-for i in (count, len(files)):
+for i in range(count, len(files)):
     if (s - files[count - 1]) + files[i] <= S:
         maxx = files[i]
     else:
