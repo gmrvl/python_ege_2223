@@ -13,7 +13,7 @@ for i in files:
 maxx = 0
 for i in range(count, n):
     if (s - files[count - 1]) + files[i] <= S:
-        maxx = i
+        maxx = files[i]
     else:
         break
 print(count, maxx)
