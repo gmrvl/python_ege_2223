@@ -18,4 +18,5 @@ for digit in file:
     if (s < count3) and (last < 0 or digit < 0):
         count += 1
         maxSum = max(maxSum, s)
+    last = digit
 print(count, maxSum)
