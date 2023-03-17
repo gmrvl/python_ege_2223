@@ -9,5 +9,3 @@ ns = sorted(ns)
 maxxi = 0
 minni = 0
 for i in range(1,n - 1):
-    
-
