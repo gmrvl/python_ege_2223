@@ -4,5 +4,6 @@ def F(n):
     elif n == 2:
         return 3
     else:
-        return F(n - 3) * n
-print(F(11))
+        return F(n - 1)+n
+
+print(F(40))
