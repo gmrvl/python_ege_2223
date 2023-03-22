@@ -2,9 +2,14 @@ file = open('26.5.txt')
 n = int(file.readline())
 maxs = 0
 ns = []
+lastx = ''
+lasty = ''
 for i in file:
     x, y = map(int, i.split())
-    ns.append([x, y])
+    if lastx != x or lasty != y:
+        ns.append([x, y])
+    lastx = x
+    lasty = y
 ns = sorted(ns)
 for i in ns:
     print(i)
