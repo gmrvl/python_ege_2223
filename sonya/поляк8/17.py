@@ -18,7 +18,6 @@ for n in file:
     n = int(n)
     summ = plast + last + n
     summ2 = bin(summ)[2:]
-    # summ2 = list(summ2)
     res = ''.join(reversed(summ2))
     if summ2 == res:
         if min(plast, last, n) > srarifm:

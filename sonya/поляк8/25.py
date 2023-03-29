@@ -17,5 +17,5 @@ for k in range(1, 10000):
             else:
                 dells.append(dell)
                 dells.append(dell2)
-    if 0 < len(dells) < 4:
+    if 0 < len(dells) < 3:
         print(k, max(dells))
