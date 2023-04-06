@@ -9,6 +9,7 @@ for x in range(2):
 def F(w, z, y, x): #демонстрация неправильного ответа
     return (((y <= z) or ((not x) and w)) == (w == z))
 
+
 print(F(1, 1, 0, 0))
 print(F(0, 0, 0, 1))
-print(F(0, 1, 1, 1)) # тут будет false
+print(F(0, 1, 1, 1))  # тут будет false
