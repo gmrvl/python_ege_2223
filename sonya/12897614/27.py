@@ -7,13 +7,13 @@ for i in file:
         a.append([punct, prob // 36])
     else:
         a.append([punct, prob // 36 + 1])
-minn = 10**1000000000
+minn = 10**1000000
 do = [0] * n
 do[0] = a[0][1]
 
 for i in range(1, n):
     do[i] = do[i-1] + a[i][1]
-
+print()
 s0 = 0
 
 for i in range(n):
