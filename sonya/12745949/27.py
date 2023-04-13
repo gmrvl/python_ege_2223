@@ -1,18 +1,25 @@
+#Дана последовательность натуральных чисел.
+# Необходимо найти максимально возможную сумму
+# её непрерывной подпоследовательности,
+# в которой количество чётных элементов кратно k=10.
 file = open('27-B.txt')
-files = [int(i) for i in file]
-files = sorted(files)
-count = 0
+n = int(file.readline())
+ostatki = [0 for i in range(10)]
+summ = 0
+maxsumm = 0
 countch = 0
-for n in range(0, len(files)):
-    if files[n] % 2 == 0:
+for n in file:
+    n = int(n)
+    summ += n
+    if n % 2 == 0:
         countch += 1
-    count += files[n]
-files = sorted(files, reverse=True)
-for n in range(0, len(files)):
-    if countch % 10 != 0:
-        if files[n] % 2 == 0:
-            countch = countch - 1
-        count = count - files[n]
+    if countch % 10 == 0:
+        maxsumm = max(maxsumm, summ)
     else:
-        print(count)
-        break
+        if ostatki[countch % 10] == 0:
+            ostatki[countch % 10] = summ
+        summ1 = summ - ostatki[countch % 10]
+        maxsumm = max(maxsumm, summ1)
+print(maxsumm)
+
+

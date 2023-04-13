@@ -1,4 +1,5 @@
 file = open('26.1.txt')
+n = int(file.readline())
 summ = 0
 maxx = 0
 bolshe50 = []
@@ -18,4 +19,4 @@ for i in range(len(bolshe50)):
     else:
         summ += bolshe50[i]
 
-print(summ, maxx)
+print(round(summ), maxx)
