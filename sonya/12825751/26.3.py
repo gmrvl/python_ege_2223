@@ -15,7 +15,7 @@ B = sorted(B)
 print(B)
 for i in range(0, len(B)):
     n = B[i][1]
-    for j in range(1, n):
+    for j in range(1, n + 1):
         if m + B[i][0] <= M:
             count += 1
             m += B[i][0]
