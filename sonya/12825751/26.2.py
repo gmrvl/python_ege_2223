@@ -20,8 +20,10 @@ for i in ns:
     else:
         break
 maxx = 0
+print(count2, len(ns))
 for i in range(count2 - 1, len(ns)):
     if (m - ns[count2 - 1]) + ns[i] <= M:
+        # ns[]
         maxx = ns[i]
     else:
         break
