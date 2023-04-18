@@ -20,12 +20,21 @@ for i in ns:
     else:
         break
 maxx = 0
+m = (m - ns[count2 - 1])
 for i in range(count2 - 1, len(ns)):
-    if (m - ns[count2 - 1]) + ns[i] <= M:
+    if m + ns[i] <= M:
         maxx = ns[i]
     else:
         break
-m = m - ns[count2 - 1] + maxx
+maxx2 = 0
+m = m - ns[count2 - 2] + maxx
+for i in range(count2 - 1, len(ns)):
+    if m + ns[i] <= M:
+        maxx2 = ns[i]
+    else:
+        break
+
+m = m + maxx2
 print(count1 + count2, m)
 
 
