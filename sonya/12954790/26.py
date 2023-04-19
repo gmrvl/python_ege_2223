@@ -29,17 +29,22 @@ m0 = 0
 for i in a:
     if len(ass) >= maxcount:
         break
-    if m0 + i <= m:
+    if m0 + i <= M:
         ass.append(i)
         m0 += i
 
 bss = []
 for i in b:
-    if m0 + i <= m:
+    if len(ass) + len(bss) >= maxcount: break
+    if m0 + i <= M:
         bss.append(i)
+        m0 += i
     else:
-        if len(ass) + len(bss) < maxcount:
-            del ass[-1]
+        if m0 + i > M:
+            while m0 + i > M:
+                m0 -= ass[-1]
+                del ass[-1]
             bss.append(i)
+            m0 += i
 print(len(ass), M - m0)
 
