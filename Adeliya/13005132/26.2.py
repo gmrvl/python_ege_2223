@@ -1,0 +1,1 @@
+file=open('26.2.txt')
