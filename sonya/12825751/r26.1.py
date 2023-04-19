@@ -31,7 +31,9 @@ for i in a:
             As.append(i)
 Bs = []
 for i in b:
-    if m + i <= m0:
+    if len(Bs) + len(As) >= maxcount:
+        break
+    if sum(As) + sum(Bs) + i <= M:
         Bs.append(i)
     else:
         if len(Bs) + len(As) < maxcount:
@@ -39,5 +41,5 @@ for i in b:
             Bs.append(i)
         else:
              break
-print(len(Bs), M - m0)
+print(len(As), M - (sum(As) + sum(Bs)))
 
