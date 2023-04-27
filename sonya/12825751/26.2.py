@@ -13,29 +13,27 @@ for i in file:
 
 ns = sorted(ns)
 count2 = 0
+ns2 = []
 for i in ns:
     if m + i <= M:
         count2 += 1
         m += i
+        ns2.append(i)
     else:
         break
-maxx = 0
-m = (m - ns[count2 - 1])
-for i in range(count2 - 1, len(ns)):
-    if m + ns[i] <= M:
-        maxx = ns[i]
-    else:
-        break
-maxx2 = 0
-m = m - ns[count2 - 2] + maxx
-for i in range(count2 - 1, len(ns)):
-    if m + ns[i] <= M:
-        maxx2 = ns[i]
-    else:
-        break
+count22 = count2
+k = len(ns) - 1
+while count2 > 0:
+    while k >= 0:
+        if sum(ns2) - ns2[count2-1] + ns[k] <= M and ns[k] != 0:
+            ns2[count2-1] = ns[k]
+            ns[k] = 0
+            count2 -= 1
+            break
+        else:
+            k -= 1
+print(count1 + count22, sum(ns2))
 
-m = m + maxx2
-print(count1 + count2, m)
 
 
 

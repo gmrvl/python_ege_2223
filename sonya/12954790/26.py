@@ -35,10 +35,11 @@ for i in a:
 
 bss = []
 for i in b:
-    if m0 + i <= m:
+    if m0 + i <= M:
         bss.append(i)
+        m0 += i
     else:
-        if len(ass) + len(bss) < maxcount:
+        if len(ass) + len(bss) > maxcount:
             del ass[-1]
             bss.append(i)
 print(len(ass), M - m0)
