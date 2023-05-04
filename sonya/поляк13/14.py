@@ -1,4 +1,7 @@
-for a in '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ':
-    r = int('Z' + a + 'YX', 55) - int('2X' + a + 'Y', 55)
-    if r % 29:
-        print(r)
+
+for a in range(55):
+    s = (55**3)*36 + (55**2)*a + 55*35 + 34 - (2*(55**3) + 34*(55**2) + 55*a + 35)
+    # r = int('Z' + a + 'YX', 55) - int('2X' + a + 'Y', 55)
+    if s % 29 == 0:
+        print(s, a)
+print(5612254 - 5698384)

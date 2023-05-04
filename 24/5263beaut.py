@@ -2,12 +2,14 @@ file = open('5263.txt').read()
 last, max_line = '', ''
 position, max_count = 0, 0
 
+
 # функция сравнения строк с максимумом
 def max_l(max_count, max_line):
     if max_count < len(last):
         max_count = len(last)
         max_line = last
     return max_count, max_line
+
 
 # функция, отвещающая за 0 и 1 позиции, т.к. они везде одинаковые
 def position1_0(i, last, position, max_count, max_line):
@@ -29,6 +31,7 @@ def position2(i, last, position, max_count, max_line):
     else:
         last, position, max_count, max_line = position1_0(i, last, position, max_count, max_line)
     return last, position, max_count, max_line
+
 
 for i in file:
     if len(last) > 0: l = last[-1]
