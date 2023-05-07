@@ -1,0 +1,1 @@
+file=open('27_A.2.txt')

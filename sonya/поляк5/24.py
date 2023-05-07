@@ -22,8 +22,7 @@ for char in file:
         last += char
 print(maxcount)
 # for char in file:
-#     if char == 'A':
-#         c += 1
+#     if char == 'A':#         c += 1
 #         if c == 1:
 #             group = char
 #         if c == 2:
