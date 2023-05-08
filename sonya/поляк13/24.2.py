@@ -8,7 +8,7 @@ count = 0
 maxcount = 0
 plast = ''
 last = ''
-k = 2
+k = 0
 for char in file:
     if k % 2 == 0:
         if plast == 'A' and last == '1' and char == 'C':
