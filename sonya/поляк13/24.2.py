@@ -3,7 +3,6 @@ file = file.replace('BE', '1')
 file = file.replace('DA', '2')
 file = file.replace('AF', '3')
 file = file.replace('FB', '4')
-print(file)
 count = 0
 maxcount = 0
 plast = ''
@@ -26,6 +25,8 @@ for char in file:
         else:
             maxcount = max(maxcount, count)
             count = 0
+    else:
+        k += 1
     plast = last
     last = char
 print(maxcount)
