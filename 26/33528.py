@@ -23,8 +23,13 @@ for i in range(len(b)):
         index = i
         c = b[i][1]
         break # тут была ошибка
+
 for i in range(c - 1, 0, -1):
     if money - b[index][0] * i >= 0:
         money -= b[index][0] * i
         total_count_b += i
+# красиво посчитать без цикла можно так:
+# if c != 0:
+#     total_count_b += money // b[index][0]
+#     money = money - (money // b[index][0] * b[index][0])
 print(total_count_b, money)
