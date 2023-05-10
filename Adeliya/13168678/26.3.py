@@ -24,7 +24,7 @@ for i in data:
 
 buied_b = []
 
-for i in alist:
+for i in blist:
     if len(buied_b) >= maxc: break
     if sum(buied_b) + i <= maxsum:
         buied_b.append(i)
@@ -33,14 +33,14 @@ for i in alist:
 
 buied_a = []
 
-for i in blist:
+for i in alist:
     if len(buied_b) + len(buied_a) >= maxc: break
     if sum(buied_b) + sum(buied_a) + i <= maxsum:
-        buied_b.append(i)
+        buied_a.append(i)
     else:
         while sum(buied_b) + sum(buied_a) + i > maxsum:
             del buied_b[-1]
-        buied_b.append(i)
+        buied_a.append(i)
 
 print(len(buied_b))
 print(maxsum - (sum(buied_b) + sum(buied_a)))
