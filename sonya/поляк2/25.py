@@ -1,18 +1,22 @@
-for x in range(1, 1007):
-    for y in range(0, 9):
-        x = str(x)
-        y = str(y)
-        s = '3' + x + '52' + y
-        dells = []
-        sqs = int(s) ** 0.5
-        if sqs != int(sqs):
-            continue
-        sqs = int(sqs)
-        dells = [sqs]
-        s = int(s)
-        for dell in range(2, sqs + 1):
-            if s % dell == 0:
+from fnmatch import*
+a = []
+for n in range(1, 10**7):
+    if fnmatch(str(n), '3*52'):
+        if n ** 0.5 == int(n ** 0.5):
+            a.append(n)
+print(a)
+for i in a:
+    sqi = int(i ** 0.5)
+    dells = []
+    for dell in range(2, sqi + 1):
+        if i % dell == 0:
+            dell2 = i // dell
+            if dell2 == dell:
                 dells.append(dell)
-                dells.append(s // dell)
-        print(s, max(dells))
+            else:
+                dells.append(dell)
+                dells.append(dell2)
+    if len(dells) % 2 == 1:
+        print(i, max(dells))
+
 

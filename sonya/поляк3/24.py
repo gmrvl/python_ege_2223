@@ -1,41 +1,15 @@
 # комбинаций BAC и СAB
-file = open('24-224.txt').read()
+file = open('24-224.txt').readline()
+file = file.replace('CAB', '*')
+file = file.replace('BAC', '*')
+print(file)
 count = 0
 maxcount = 0
-last = ''
-
 for char in file:
-    if char == 'B':
-        if last == 'CA':
-            count += 1
-            last = ''
-        elif last == '':
-            count += 1
-            last = 'B'
-        else:
-            if maxcount < count:
-                maxcount = count
-            count = 1
-            last = 'B'
-    elif char == 'C':
-        if last == 'BA':
-            count += 1
-            last = ''
-        elif last == '':
-            count += 1
-            last = 'C'
-        else:
-            if maxcount < count:
-                maxcount = count
-            count = 1
-            last = 'C'
-    elif char == 'A':
-        if last == 'C' or last == 'B':
-            count += 1
-            last += 'A'
-        else:
-            maxcount = max(maxcount, count)
-            count = 0
-            last = ''
+    if char == '*':
+        count += 1
+    else:
+        maxcount = max(maxcount, count)
+        count = 0
 maxcount = max(maxcount, count)
 print(maxcount)
