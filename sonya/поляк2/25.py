@@ -1,7 +1,7 @@
 from fnmatch import*
 a = []
 for n in range(1, 10**7):
-    if fnmatch(str(n), '3*52'):
+    if fnmatch(str(n), '3*52?'):
         if n ** 0.5 == int(n ** 0.5):
             a.append(n)
 print(a)
