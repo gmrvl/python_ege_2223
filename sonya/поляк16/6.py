@@ -1,5 +1,4 @@
 from turtle import*
-left(90)
 k = 30
 for n in range(15):
     forward(4*k)
