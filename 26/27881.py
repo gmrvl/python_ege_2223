@@ -1,5 +1,5 @@
 file = open('27881.txt')
-s, n = map(int, file.readline().split())
+s,n = map(int, file.readline().split())
 
 a = []
 for i in file:
