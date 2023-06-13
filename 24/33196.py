@@ -11,3 +11,4 @@ for i in file:
 
 for i in range(26):
     print(counts[i], alth[i])
+print(max(counts))
