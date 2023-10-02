@@ -1,4 +1,5 @@
 file = open('26.1.txt')
+file = open('26.1.txt')
 S, n = map(int, file.readline().split())
 files = [int(i) for i in file]
 files = sorted(files)
